@@ -1,0 +1,3 @@
+[submodule "chatdev_core"]
+	path = chatdev_core
+	url = https://github.com/OpenBMB/ChatDev

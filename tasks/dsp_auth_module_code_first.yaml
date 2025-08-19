@@ -1,0 +1,22 @@
+title: "Authentication & User Management Module (Code-first)"
+description: >
+  Implement a runnable scaffold with minimal docs:
+  - Frontend: React 18 + TS + Vite + Tailwind + shadcn/ui
+    * Routes: /login, /signup, /verify, /dashboard
+    * Role-based nav (ADMIN, AGENCY, ADVERTISER)
+    * Auth context wired to Supabase client
+  - Backend: Supabase schema (profiles, roles), RLS policies, Edge Function for agency<->advertiser link
+  - Provide exact commands to run frontend, and apply Supabase schema
+deliverables:
+  - "frontend/ (vite app) with working auth forms and protected routes"
+  - "supabase/schema.sql, supabase/rls.sql, functions/link_account/index.ts"
+  - "README with precise dev steps; minimal prose"
+technical_constraints:
+  - "Maximize runnable code, minimize documentation"
+  - "No secrets in code; read keys from .env"
+  - "React Query for data; zod + react-hook-form for forms"
+acceptance_criteria:
+  - "User can signup, receive verification email, verify, then login"
+  - "Role-based routing works; dashboard renders per role"
+  - "Edge Function callable; RLS prevents cross-tenant access"
+  

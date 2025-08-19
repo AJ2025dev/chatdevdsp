@@ -1,0 +1,26 @@
+title: "Authentication & User Management Module"
+description: >
+  Develop the Authentication and User Management module for a DSP.
+  Secure signup/login with email verification; role-based access
+  (Admin, Agency, Advertiser); user profile UI; agency–advertiser linking;
+  session management via Supabase; basic UI scaffolding and role routing.
+deliverables:
+  - "Frontend: React 18 + TS, Tailwind, shadcn/ui; auth forms; verification flow; dashboard shell; profile page."
+  - "Backend: Supabase Auth; Postgres schema; RLS; Edge Functions for account linking."
+  - "Integration: RBAC enforced in UI and DB; docs/README for setup and extension."
+technical_constraints:
+  - "Use React 18 + TypeScript, Tailwind, shadcn/ui."
+  - "Use React Query for data; Context API for auth/session/role."
+  - "Supabase Auth email/password with verification."
+  - "Roles: ADMIN, AGENCY, ADVERTISER; persisted and enforced."
+  - "Postgres schema for profiles, orgs, agency<->advertiser relations."
+  - "RLS policies for tenant isolation; Edge Functions for secure linking."
+  - "No secrets in frontend; validate inputs; follow OWASP auth guidance."
+acceptance_criteria:
+  - "User can sign up, receive verification email, verify, then log in."
+  - "Active session recognized by frontend; supports refresh; logout works."
+  - "RBAC reflected in routes/nav (admin vs agency vs advertiser)."
+  - "Profile page: view/edit company info with proper auth."
+  - "Agency can invite/link advertiser via Edge Function; role-checked."
+  - "Unauthed users see auth screen; authed see role-appropriate shell."
+  - "Runs without runtime errors; basic tests/docs provided."
